@@ -1,0 +1,21 @@
+sudo: required
+
+services:
+  - docker
+
+language: java
+
+jdk:
+  - openjdk8
+  - openjdk11
+
+before_install:
+  # Disable services enabled by default
+  - sudo service mysql stop
+  - sudo /etc/init.d/postgresql stop
+
+  # Run my databases in the background
+  - docker-compose -f docker/docker-compose-travis.yml up -d
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
