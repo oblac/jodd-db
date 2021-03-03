@@ -41,7 +41,7 @@ group = 'org.jodd'
 //version = '6.0.0.' + timestamp() + "-SNAPSHOT"
 version = '6.0.0'
 
-rootProject.description = 'Jodd DbOom'
+rootProject.description = 'Jodd Db'
 
 ext {
 }
@@ -130,7 +130,7 @@ ext.admin = hasProperty('sonatypeUsername')
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
-			artifactId = 'jodd-dboom'
+			artifactId = 'jodd-db'
 			from components.java
 			versionMapping {
 				usage('java-api') {
@@ -141,13 +141,13 @@ publishing {
 				}
 			}
 			pom {
-				name = 'Jodd DbOom'
-				description = 'Jodd DbOom'
-				url = 'https://dboom.jodd.org'
+				name = 'Jodd Db'
+				description = 'Jodd Db'
+				url = 'https://db.jodd.org'
 				licenses {
 					license {
 						name = 'BSD-2-Clause'
-						url = 'https://github.com/oblac/jodd-dboom/blob/master/LICENSE'
+						url = 'https://github.com/oblac/jodd-db/blob/master/LICENSE'
 					}
 				}
 				developers {
@@ -159,9 +159,9 @@ publishing {
 					}
 				}
 				scm {
-					url = 'https://github.com/oblac/jodd-dboom.git'
-					connection = 'scm:git:git://github.com/oblac/jodd-dboom.git'
-					developerConnection = 'scm:git:ssh://git@github.com/oblac/jodd-dboom.git'
+					url = 'https://github.com/oblac/jodd-db.git'
+					connection = 'scm:git:git://github.com/oblac/jodd-db.git'
+					developerConnection = 'scm:git:ssh://git@github.com/oblac/jodd-db.git'
 				}
 			}
 		}
